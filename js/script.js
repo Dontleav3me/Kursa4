@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "url('../img/probeg_2.png') center / cover no-repeat",
       "url('../img/probeg_3.png') center / cover no-repeat",
       "url('../img/probeg_4.png') center / cover no-repeat",
+      "url('../img/probeg_5.png') center / cover no-repeat",
+      "url('../img/probeg_6.png') center / cover no-repeat",
 	    "url('../img/bg_1.png') center / cover no-repeat",
     ];
 
