@@ -1,3 +1,13 @@
+function mother(){
+ b = document.getElementById("first");
+ if (b.hidden == true){
+  b.hidden = false
+}
+  else {   
+  b.hidden = true
+}
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     var slider = document.querySelector('.probeg_bg');

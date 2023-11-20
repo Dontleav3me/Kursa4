@@ -102,6 +102,10 @@ nav {
           flex-flow: row nowrap;
 }
 
+.page_2 {
+  visibility: hidden;
+}
+
 .subheader {
   width: 90%;
   position: absolute;
