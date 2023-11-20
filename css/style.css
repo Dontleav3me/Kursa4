@@ -105,6 +105,11 @@ nav {
 .page_2 {
   visibility: hidden;
 }
+.page_2_cars {
+  color: #000;
+  position: absolute;
+  z-index: 3;
+}
 
 .subheader {
   width: 90%;
