@@ -11,7 +11,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(0, 255, 42, 0.4);
+  background: rgba(28, 105, 212, 0.4);
   -webkit-backdrop-filter: blur(8.5px);
           backdrop-filter: blur(8.5px);
   color: #fff;
@@ -38,7 +38,6 @@ body {
 }
 
 header {
-  position: absolute;
   width: 100%;
   height: 85px;
   z-index: 10;
@@ -127,32 +126,26 @@ nav {
           flex-flow: row nowrap;
 }
 
+.avto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 48%;
+  margin-bottom: 10px;
+}
 .avto_cars {
   color: #000;
 }
 
-.subheader {
-  width: 90%;
-  position: absolute;
-  height: 87px;
-  padding-top: 50px;
-}
-.subheader_udovolstvie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 50px;
-  color: #FFF;
-  text-align: left;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  width: 215.53px;
-  height: 21px;
-}
-
 .promo {
   min-height: 1080px;
+  margin-top: -85px;
+  z-index: 9;
   background: url("../img/probeg_5.png") center center/cover no-repeat;
 }
 .promo .container {
@@ -163,6 +156,19 @@ nav {
       -ms-flex-align: end;
           align-items: flex-end;
   padding-top: 600px;
+}
+.promo_udovolstvie {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 325px;
+  color: #FFF;
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  width: 215.53px;
+  height: 21px;
+  z-index: 20;
 }
 .promo_header {
   color: #FFF;

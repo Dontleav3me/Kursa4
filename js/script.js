@@ -1,13 +1,21 @@
 //хайд-авто
 function mother(){
- b = document.getElementById("");
+  a = document.getElementById("second");
+  b = document.getElementById("first");
  if (b.hidden == true){
   b.hidden = false
+  a.hidden = true
 }
   else {   
   b.hidden = true
+  a.hidden = false
 }
 }
+
+window.onload = function() {
+a = document.getElementById("second");
+a.hidden = true;
+};
 
 
 //Кнопка топ справа

@@ -16,7 +16,7 @@ $bluec: #1EACC7
   position: fixed
   bottom: 20px
   right: 20px
-  background: rgba(0, 255, 42, 0.4)
+  background: rgba(28, 105, 212, 0.4)
   backdrop-filter: blur(8.5px)
   color: #fff
   padding: 10px
@@ -39,7 +39,6 @@ body
   padding: 0
 
 header
-  position: absolute
   width: 100%
   height: 85px
   z-index: 10
@@ -112,18 +111,32 @@ nav
   &_cars
     color: #000
 
-  &_cars_text
+  &_img
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
+  &_img img
+  width: 48%
+  margin-bottom: 10px
 
-.subheader
-  width: 90%
-  position: absolute
-  height: 87px
-  padding-top: 50px
+.page
+
+.promo
+  min-height: 1080px
+  margin-top: -85px
+  z-index: 9
+  background: url("../img/probeg_5.png") center (center / cover) no-repeat
+
+  .container
+    display: flex
+    align-items: flex-end
+    padding-top: 600px
 
   &_udovolstvie
-    display: flex
-    margin-top: 50px
+    position: absolute
+    margin-top: 100px
+    margin-left: 325px  
     color: #FFF
     text-align: left
     font-size: 16px
@@ -131,15 +144,7 @@ nav
     font-weight: 700
     width: 215.53px
     height: 21px
-
-.promo
-  min-height: 1080px
-  background: url("../img/probeg_5.png") center (center / cover) no-repeat
-
-  .container
-    display: flex
-    align-items: flex-end
-    padding-top: 600px
+    z-index: 20
 
   &_header
     color: #FFF
