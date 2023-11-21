@@ -1,5 +1,5 @@
 function mother(){
- b = document.getElementById("first");
+ b = document.getElementById("");
  if (b.hidden == true){
   b.hidden = false
 }
