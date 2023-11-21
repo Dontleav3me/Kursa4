@@ -6,6 +6,31 @@
   font-family: "Roboto", sans-serif;
 }
 
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 255, 42, 0.4);
+  -webkit-backdrop-filter: blur(8.5px);
+          backdrop-filter: blur(8.5px);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#topBtn img {
+  display: block;
+  margin: 0 auto 5px;
+}
+
+#topBtn span {
+  display: block;
+}
+
 body {
   height: 100%;
   margin: 0;

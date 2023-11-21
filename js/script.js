@@ -1,3 +1,4 @@
+//хайд-авто
 function mother(){
  b = document.getElementById("");
  if (b.hidden == true){
@@ -8,6 +9,33 @@ function mother(){
 }
 }
 
+
+//Кнопка топ справа
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var topBtn = document.getElementById("topBtn");
+  var promoSection = document.querySelector(".promo");
+  var scrolled = window.scrollY || document.documentElement.scrollTop;
+
+  // Порог для отображения кнопки после прокрутки блока promoSection
+  var threshold = promoSection.offsetTop + promoSection.offsetHeight;
+
+  if (scrolled > threshold) {
+      topBtn.style.display = "block";
+  } else {
+      topBtn.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//Слайдер
 document.addEventListener("DOMContentLoaded", function () {
 
     var slider = document.querySelector('.probeg_bg');
@@ -60,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+//Кнопка топ снизу контейнер
 document.getElementById('scrollContainer').addEventListener('click', function() {
 	setTimeout(function() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
