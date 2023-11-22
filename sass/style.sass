@@ -33,6 +33,22 @@ $bluec: #1EACC7
 #topBtn span
     display: block
   
+$card-border-color: #ddd
+$text-color: #333
+$primary-color: #005daa
+
+#closeButton
+  padding: 10px 20px
+  background-color: transparent
+  border: none
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 24px
+  cursor: pointer
+  border-radius: 4px
+
+
 body 
   height: 100% 
   margin: 0
@@ -98,6 +114,10 @@ nav
     transform-origin: bottom right
     transition: transform 0.5s ease
 
+  &_menu li a.active::after 
+    transform: scaleX(1)
+    transform-origin: bottom left
+
   &_menu li a:hover::after
     transform: scaleX(1)
     transform-origin: bottom left
@@ -108,19 +128,94 @@ nav
 
 .avto
 
-  &_cars
-    color: #000
+.models-title
+  width: 100%
+  text-align: left
+  margin: 30px 0
 
-  &_img
+  h2
+    font-size: 2em
+    color: #000
+    padding: 10px 0
+    border-bottom: 2px solid #ddd
+
+
+.model-label-wrapper
+  margin-top: 4px
+
+.model-label
+  background-color: rgba(121,127,132,.3)
+  font-weight: 700
+  font-style: normal
+  font-stretch: normal
+  letter-spacing: 3px
+  color: #161718
+  line-height: 11px
+  font-size: 16px
+  padding: 5px 10px
+  display: inline-block
+  border-radius: 2px
+
+.model-label-top-wrapper 
+  font-weight: 700
+  font-style: normal
+  font-stretch: normal
+  letter-spacing: 3px
+  color: #797f84
+  line-height: 11px
+  font-size: 15px
+  position: absolute
+  top: 5px
+  left: 5px
+
+.car-container
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
+  margin: 10px
+  padding-left: 15%
+  padding-right: 15%
 
-  &_img img
-  width: 48%
-  margin-bottom: 10px
+.car-card
+  position: relative
+  border: 1px solid #ddd
+  border-radius: 4px
+  margin-bottom: 20px
+  width: calc(20%)
+  text-align: center
+  overflow: hidden
+  transform: scale(0.7)
+  transform-origin: center
+  
 
-.page
+  img
+    width: 100%
+    height: auto
+    display: block
+    justify-content: center
+
+  .car-info
+    padding: 15px
+
+    h2
+      font-size: 1.5em
+      font-weight: 700
+      font-style: normal
+      font-stretch: normal
+      letter-spacing: normal
+      color: #161718
+      line-height: 113%
+      font-size: 32px
+
+  &:hover
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
+@media (max-width: 1024px)
+  .car-card
+    width: calc(50% - 40px)
+
+@media (max-width: 600px)
+  .car-card
+    width: calc(100% - 20px)
 
 .promo
   min-height: 1080px

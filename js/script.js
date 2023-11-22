@@ -1,22 +1,41 @@
 //хайд-авто
-function mother(){
-  a = document.getElementById("second");
-  b = document.getElementById("first");
- if (b.hidden == true){
-  b.hidden = false
-  a.hidden = true
-}
-  else {   
-  b.hidden = true
-  a.hidden = false
-}
-}
-
 window.onload = function() {
-a = document.getElementById("second");
-a.hidden = true;
+  var second = document.getElementById("second");
+  var first = document.getElementById("first");
+  second.style.display = "none"; // Скрывать, используя "display" вместо "hidden"
 };
 
+function mother() {
+  var second = document.getElementById("second");
+  var first = document.getElementById("first");
+  
+  if (second.style.display === "block") {
+    second.style.display = "none";
+    first.style.display = "block";
+    var closeButton = document.getElementById("closeButton");
+    if (closeButton) {
+      closeButton.remove(); // Убирать кнопку закрытия
+    }
+  } else {
+    first.style.display = "none";
+    second.style.display = "block";
+    addCloseButton(); // Добавлять кнопку закрытия
+  }
+}
+
+function addCloseButton() {
+  var closeButtonExists = document.getElementById("closeButton");
+  if (!closeButtonExists) {
+    var closeButton = document.createElement("button");
+    closeButton.id = "closeButton";
+    closeButton.innerText = "✖️";
+    closeButton.style.position = "fixed";
+    closeButton.style.right = "20px";
+    closeButton.style.top = "20px";
+    closeButton.onclick = mother; // Назначать ту же функцию для закрытия блока
+    document.body.appendChild(closeButton);
+  }
+}
 
 //Кнопка топ справа
 window.onscroll = function() {
