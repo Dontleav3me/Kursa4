@@ -1,8 +1,36 @@
 //хайд-авто
-window.onload = function() {
+window.onload = function () {
+  // Получение всех элементов меню.
+  var menuItems = document.querySelectorAll('.navbar_menu li a');
+  
+  // Проходимся по всем элементам меню и назначаем обработчики клика.
+  menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      // Проверка, был ли элемент уже активен.
+      if (item.classList.contains('active')) {
+        // Если да, удалить класс active и выход из обработчика.
+        item.classList.remove('active');
+        return; // Досрочный выход, чтобы избежать повторной установки класса active
+      }
+
+      // Если найден другой активный элемент, удаляем класс active у предыдущего.
+      var currentActive = document.querySelector('.navbar_menu li a.active');
+      if (currentActive) {
+        currentActive.classList.remove('active');
+      }
+
+      // Добавляем класс active к только что нажатому элементу.
+      item.classList.add('active');
+    });
+  });
+
+  // Скрыть элемент 'second'
   var second = document.getElementById("second");
-  var first = document.getElementById("first");
-  second.style.display = "none"; // Скрывать, используя "display" вместо "hidden"
+  if (second) {
+    second.style.display = "none";
+  }
+
+  // Должна быть здесь логика для кнопки закрытия и прочее...
 };
 
 function mother() {
@@ -36,6 +64,7 @@ function addCloseButton() {
     document.body.appendChild(closeButton);
   }
 }
+
 
 //Кнопка топ справа
 window.onscroll = function() {
