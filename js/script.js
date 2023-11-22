@@ -19,18 +19,15 @@ window.onload = function () {
         currentActive.classList.remove('active');
       }
 
-      // Добавляем класс active к только что нажатому элементу.
       item.classList.add('active');
     });
   });
 
-  // Скрыть элемент 'second'
   var second = document.getElementById("second");
   if (second) {
     second.style.display = "none";
   }
 
-  // Должна быть здесь логика для кнопки закрытия и прочее...
 };
 
 function mother() {
@@ -51,7 +48,7 @@ function mother() {
   }
 }
 
-function addCloseButton() {
+/* function addCloseButton() {
   var closeButtonExists = document.getElementById("closeButton");
   if (!closeButtonExists) {
     var closeButton = document.createElement("button");
@@ -62,9 +59,20 @@ function addCloseButton() {
     closeButton.style.top = "20px";
     closeButton.onclick = mother; // Назначать ту же функцию для закрытия блока
     document.body.appendChild(closeButton);
-  }
-}
+  } БЕДЫ С БАШКОЙ
+} */
 
+/* #closeButton
+  padding: 10px 20px
+  background-color: transparent
+  border: none
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 24px
+  cursor: pointer
+  border-radius: 4px
+ */
 
 //Кнопка топ справа
 window.onscroll = function() {
