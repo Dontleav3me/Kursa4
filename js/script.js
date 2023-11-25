@@ -48,31 +48,32 @@ function mother() {
   }
 }
 
-/* function addCloseButton() {
-  var closeButtonExists = document.getElementById("closeButton");
-  if (!closeButtonExists) {
-    var closeButton = document.createElement("button");
-    closeButton.id = "closeButton";
-    closeButton.innerText = "✖️";
-    closeButton.style.position = "fixed";
-    closeButton.style.right = "20px";
-    closeButton.style.top = "20px";
-    closeButton.onclick = mother; // Назначать ту же функцию для закрытия блока
-    document.body.appendChild(closeButton);
-  } БЕДЫ С БАШКОЙ
-} */
+// Код для открытия модальных окон
+document.querySelectorAll('.modal-open-link').forEach(function(element) {
+  element.addEventListener('click', function(event) {
+    event.preventDefault(); // Отменяем стандартное действие элемента
+    var modalSelector = element.tagName === 'A' ? element.getAttribute('href') : element.getAttribute('data-modal');
+    var modal = document.querySelector(modalSelector);
+    if (modal) {
+      modal.style.display = 'block'; // Показываем модальное окно
+    }
+  });
+});
 
-/* #closeButton
-  padding: 10px 20px
-  background-color: transparent
-  border: none
-  text-align: center
-  text-decoration: none
-  display: inline-block
-  font-size: 24px
-  cursor: pointer
-  border-radius: 4px
- */
+// Код для закрытия модальных окон
+document.querySelectorAll('.close').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var modal = button.closest('.modal'); // Получаем ближайший элемент с классом .modal
+    modal.style.display = 'none'; // Скрываем модальное окно
+  });
+});
+
+// Опциональный код для закрытия модального окна при клике вне его содержимого
+window.addEventListener('click', function(event) {
+  if (event.target.classList.contains('modal')) { // Если клик по фону модального окна
+    event.target.style.display = 'none'; // Скрываем его
+  }
+});
 
 //Кнопка топ справа
 window.onscroll = function() {
