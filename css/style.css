@@ -434,19 +434,6 @@ textarea {
           align-items: flex-end;
   padding-top: 600px;
 }
-.promo_udovolstvie {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 325px;
-  color: #FFF;
-  text-align: left;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  width: 215.53px;
-  height: 21px;
-  z-index: 20;
-}
 .promo_header {
   color: #FFF;
   text-align: left;
@@ -808,11 +795,6 @@ textarea {
     line-height: 48px;
   }
 
-  .promo_udovolstvie {
-    margin-left: 285px;
-    font-size: 14px;
-  }
-
   .drift_text {
     padding-top: 50px;
     margin-left: 60px;
@@ -880,14 +862,6 @@ textarea {
   .promo_btn {
     margin-top: 25px;
     margin-left: 0;
-  }
-
-  .promo_udovolstvie {
-    margin-left: 40px;
-    width: auto;
-    height: auto;
-    text-align: left;
-    z-index: 0;
   }
 
   .probeg_bg {
@@ -1007,17 +981,12 @@ textarea {
     margin-top: -80px;
   }
 
-  font-size: 14px;
+  .headline, .subheadline {
+    font-size: 14px;
+  }
+
   .promo {
     min-height: 800px;
-  }
-  .promo_udovolstvie {
-    margin-top: 100px;
-    margin-left: 40px;
-    width: auto;
-    height: auto;
-    text-align: left;
-    z-index: 0;
   }
 
   .promo_header {
