@@ -39,14 +39,35 @@ function mother() {
     first.style.display = "block";
     var closeButton = document.getElementById("closeButton");
     if (closeButton) {
-      closeButton.remove(); // Убирать кнопку закрытия
     }
   } else {
     first.style.display = "none";
     second.style.display = "block";
-    addCloseButton(); // Добавлять кнопку закрытия
   }
 }
+
+//гамбургер
+document.getElementById("mobile-toggle").addEventListener("click", function() {
+  this.classList.toggle("active");
+  document.querySelector(".navbar_wrap").classList.toggle("active");
+});
+
+// Получаем все элементы меню
+var menuItems = document.querySelectorAll('.navbar_menu li a');
+
+// Функция для закрытия меню
+function closeMenu() {
+  document.getElementById("mobile-toggle").classList.remove("active");
+  document.querySelector(".navbar_wrap").classList.remove("active");
+}
+
+// Добавляем событие клика ко всем пунктам меню для закрытия мобильного меню после выбора
+menuItems.forEach(function(menuItem) {
+  menuItem.addEventListener('click', function() {
+    closeMenu(); // Вызываем функцию закрытия меню
+  });
+});
+
 
 // Код для открытия модальных окон
 document.querySelectorAll('.modal-open-link').forEach(function(element) {
@@ -59,6 +80,11 @@ document.querySelectorAll('.modal-open-link').forEach(function(element) {
     }
   });
 });
+
+// Получаем доступ к переключателю и обёртке меню
+var toggle = document.getElementById('mobile-toggle');
+var navbarWrap = document.querySelector('.navbar_wrap');
+
 
 // Код для закрытия модальных окон
 document.querySelectorAll('.close').forEach(function(button) {
