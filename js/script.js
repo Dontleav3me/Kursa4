@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Массив фоновых изображений для слайдера
     var slideImages = [
       "url('../img/probeg_1.png') center / cover no-repeat",
-      "url('../img/probeg.png') center / cover no-repeat",
       "url('../img/probeg_2.png') center / cover no-repeat",
       "url('../img/6.png') center / cover no-repeat",
       "url('../img/probeg_4.png') center / cover no-repeat",
