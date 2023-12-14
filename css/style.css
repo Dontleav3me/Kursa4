@@ -713,6 +713,32 @@ textarea {
   height: auto;
 }
 
+.buy {
+  color: #000;
+  text-align: center;
+}
+.buy .container {
+  padding: 120px 60px;
+  max-width: 55%;
+}
+.buy_header_text {
+  font-weight: bold;
+}
+.buy_probel {
+  min-height: 16px;
+}
+.buy_subheader_text {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.video {
+  overflow: hidden;
+}
+.video video {
+  height: 10%;
+}
+
 .map {
   background-color: #FFF;
   color: #000;
