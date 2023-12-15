@@ -718,7 +718,9 @@ textarea {
   text-align: center;
 }
 .buy .container {
-  padding: 120px 60px;
+  padding: 0px 60px;
+  padding-top: 120px;
+  padding-bottom: 30px;
   max-width: 55%;
 }
 .buy_header_text {
@@ -736,7 +738,7 @@ textarea {
   overflow: hidden;
 }
 .video video {
-  height: 10%;
+  width: 50%;
 }
 
 .map {
