@@ -254,7 +254,7 @@ header {
   width: 50%;
 }
 
-.drift {
+.accessories {
   background: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,18 +264,18 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.drift_photo {
+.accessories_photo {
   padding: 50px 0 50px 0;
 }
-.drift_img {
+.accessories_img {
   width: 100%;
   height: auto;
 }
-.drift_text {
+.accessories_text {
   padding-top: 80px;
   margin-left: 80px;
 }
-.drift_text_header {
+.accessories_text_header {
   color: #999;
   font-size: 14px;
   font-style: normal;
@@ -284,21 +284,21 @@ header {
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
-.drift_text_subheader {
+.accessories_text_subheader {
   color: #FFF;
   font-size: 64px;
   font-style: normal;
   font-weight: 300;
   line-height: 80px;
 }
-.drift_text_descr {
+.accessories_text_descr {
   color: #FFF;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
 }
-.drift_btn {
+.accessories_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,7 +320,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.drift_btn:hover {
+.accessories_btn:hover {
   background-image: none;
   background-color: #1EACC7;
 }
